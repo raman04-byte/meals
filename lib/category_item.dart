@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'dummy.dart';
-class CategoryItem extends StatefulWidget {
-  const CategoryItem(String title, Color color,{super.key});
+class CategoryItem extends StatelessWidget {
 
-  @override
-  State<CategoryItem> createState() => _CategoryItemState();
-}
+  final String title;
 
-class _CategoryItemState extends State<CategoryItem> {
-  final String title = '';
-  final Color color = Colors.black;
+  final Color color;
+  const CategoryItem(this.title, this.color, {super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,6 +15,7 @@ class _CategoryItemState extends State<CategoryItem> {
         gradient: LinearGradient(
           colors: [
             color.withOpacity(0.7),
+            color,
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
