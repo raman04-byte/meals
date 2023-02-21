@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:meals/dummy.dart';
-import 'category_item.dart';
+import 'package:meals/dummy_data.dart';
+import './category_item.dart';
 
-class CategoriesScreen extends StatefulWidget {
+class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
 
-  @override
-  State<CategoriesScreen> createState() => _CategoriesScreenState();
-}
-
-class _CategoriesScreenState extends State<CategoriesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +16,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           crossAxisSpacing: 20,
           mainAxisExtent: 20,
         ),
-        children: DUMMY_CATEGORIES
+        children: dummyCategories
             .map(
               (catData) => CategoryItem(catData.title, catData.color),
             )
