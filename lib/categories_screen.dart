@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meals/dummy.dart';
+import 'category_item.dart';
 
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({super.key});
@@ -17,7 +19,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         crossAxisSpacing: 20,
         mainAxisExtent: 20,
       ),
-      children: const [],
+      children: DUMMY_CATEGORIES.map((catData)=> CategoryItem(catData.title,catData.color)).toList(),
     );
   }
 }
