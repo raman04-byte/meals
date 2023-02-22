@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import './models/category.dart';
 
 const dummyCategories = [
-  Category(
+    Category(
     id: 'c1',
     title: 'Italian',
     color: Colors.purple,
@@ -17,8 +17,8 @@ const dummyCategories = [
   ),
   Category(
     id: 'c3',
-    title: 'Asian',
-    color: Colors.lightGreen,
+    title: 'Hamburgers',
+    color: Colors.orange,
   ),
   Category(
     id: 'c4',
